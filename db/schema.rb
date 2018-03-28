@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180328101321) do
+ActiveRecord::Schema.define(version: 20180328181312) do
 
   create_table "currencies", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "full_name"
@@ -22,19 +22,19 @@ ActiveRecord::Schema.define(version: 20180328101321) do
   create_table "plan_rules", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "plan_id"
     t.integer  "position"
-    t.decimal  "prize",      precision: 10
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.float    "prize",      limit: 24
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
     t.index ["plan_id"], name: "index_plan_rules_on_plan_id", using: :btree
   end
 
   create_table "plans", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.integer  "currency_id"
-    t.integer  "ticket_price"
+    t.float    "ticket_price",          limit: 24
     t.integer  "participant_threshold"
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
     t.index ["currency_id"], name: "index_plans_on_currency_id", using: :btree
   end
 
@@ -57,11 +57,11 @@ ActiveRecord::Schema.define(version: 20180328101321) do
 
   create_table "tickets", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "number"
-    t.decimal  "amount",         precision: 10
+    t.float    "amount",         limit: 24
     t.integer  "plan_id"
     t.string   "transaction_id"
-    t.datetime "created_at",                    null: false
-    t.datetime "updated_at",                    null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
     t.index ["number"], name: "index_tickets_on_number", using: :btree
     t.index ["plan_id"], name: "index_tickets_on_plan_id", using: :btree
     t.index ["transaction_id"], name: "index_tickets_on_transaction_id", using: :btree

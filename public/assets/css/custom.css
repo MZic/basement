@@ -2,6 +2,14 @@
   text-decoration: none;
 }
 
+.highlights {
+  padding: 0 50px;
+}
+
+.cc.big{
+  font-size: 100px;
+}
+
 header > .BTC-alt, header > .LTC-alt, header > .ETH {
   font-size: 100px;
   color: rgb(17,17,17);

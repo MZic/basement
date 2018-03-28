@@ -1,0 +1,17 @@
+<center><h1><i class="cc <%=@currency.short_name%> big" title="<%=@currency.short_name%>"></i></h1></center>
+<div class="highlights">
+	<% @currency.plans.each do |plan| %>
+		<%= link_to(plan_url(plan.id)) do%>
+			<div class="content">
+				<h2><%= plan.name%></h2>
+				<h3>Ticket price: <%= plan.ticket_price%> <%= @currency.short_name%></h3>
+				<ul class="alt">
+					<li>1st prize: <%= plan.first_prize%> <%= @currency.short_name%></li>
+					<li>2nd prize: <%= plan.second_prize%> <%= @currency.short_name%></li>
+					<li>3rd prize: <%= plan.third_prize%> <%= @currency.short_name%></li>
+					<li>4th to 20th prize: <%= plan.nth_prize%> <%= @currency.short_name%></li>
+				</ul>
+			</div>
+		<% end %>
+	<% end %>
+</div>

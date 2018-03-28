@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   end
 
   resources :home, only: [:index]
+  resources :plan, only: [:show]
+  resources :currency, only: [:show]
 end

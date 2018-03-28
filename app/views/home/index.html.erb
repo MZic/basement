@@ -1,35 +1,32 @@
 <div class="highlights">
-	<a href="#">
+	<%= link_to(currency_url('btc')) do%>
 		<section>
 			<div class="content">
 				<header>
 					<i class="cc BTC-alt" title="BTC"></i>
 					<h3>Bitcoin</h3>
 				</header>
-				<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
 			</div>
 		</section>
-	</a>
-	<a href="#">
+	<% end %>
+	<%= link_to(currency_url('eth')) do%>
 		<section>
 			<div class="content">
 				<header>
 					<i class="cc ETH" title="ETH"></i>
 					<h3>Ethereum</h3>
 				</header>
-				<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
 			</div>
 		</section>
-	</a>
-	<a href="#">
+	<% end %>
+	<%= link_to(currency_url('ltc')) do%>
 		<section>
 			<div class="content">
 				<header>
 					<i class="cc LTC-alt" title="LTC"></i>
 					<h3>Litecoin</h3>
 				</header>
-				<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
 			</div>
 		</section>
-	</a>
+	<% end %>
 </div>
