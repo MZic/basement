@@ -12619,3 +12619,69 @@ Processing by CurrencyController#show as HTML
 Completed 200 OK in 118ms (Views: 107.3ms | ActiveRecord: 8.1ms)
 
 
+Started GET "/currency/ltc" for 127.0.0.1 at 2018-03-28 22:31:23 +0200
+Processing by CurrencyController#show as HTML
+  Parameters: {"id"=>"ltc"}
+  [1m[36mCurrency Load (0.4ms)[0m  [1m[34mSELECT  `currencies`.* FROM `currencies` WHERE `currencies`.`short_name` = 'ltc' ORDER BY `currencies`.`id` ASC LIMIT 1[0m
+  Rendering currency/show.html.erb within layouts/application
+  [1m[36mPlan Load (0.3ms)[0m  [1m[34mSELECT `plans`.* FROM `plans` WHERE `plans`.`currency_id` = 23[0m
+  [1m[36mPlanRule Load (0.2ms)[0m  [1m[34mSELECT  `plan_rules`.* FROM `plan_rules` WHERE `plan_rules`.`plan_id` = 58 AND `plan_rules`.`position` = 1 ORDER BY `plan_rules`.`id` ASC LIMIT 1[0m
+  [1m[36mPlanRule Load (0.2ms)[0m  [1m[34mSELECT  `plan_rules`.* FROM `plan_rules` WHERE `plan_rules`.`plan_id` = 58 AND `plan_rules`.`position` = 2 ORDER BY `plan_rules`.`id` ASC LIMIT 1[0m
+  [1m[36mPlanRule Load (0.2ms)[0m  [1m[34mSELECT  `plan_rules`.* FROM `plan_rules` WHERE `plan_rules`.`plan_id` = 58 AND `plan_rules`.`position` = 3 ORDER BY `plan_rules`.`id` ASC LIMIT 1[0m
+  [1m[36mPlanRule Load (0.2ms)[0m  [1m[34mSELECT  `plan_rules`.* FROM `plan_rules` WHERE `plan_rules`.`plan_id` = 58 AND `plan_rules`.`position` = 4 ORDER BY `plan_rules`.`id` ASC LIMIT 1[0m
+  [1m[36mPlanRule Load (0.2ms)[0m  [1m[34mSELECT  `plan_rules`.* FROM `plan_rules` WHERE `plan_rules`.`plan_id` = 59 AND `plan_rules`.`position` = 1 ORDER BY `plan_rules`.`id` ASC LIMIT 1[0m
+  [1m[36mPlanRule Load (0.2ms)[0m  [1m[34mSELECT  `plan_rules`.* FROM `plan_rules` WHERE `plan_rules`.`plan_id` = 59 AND `plan_rules`.`position` = 2 ORDER BY `plan_rules`.`id` ASC LIMIT 1[0m
+  [1m[36mPlanRule Load (0.4ms)[0m  [1m[34mSELECT  `plan_rules`.* FROM `plan_rules` WHERE `plan_rules`.`plan_id` = 59 AND `plan_rules`.`position` = 3 ORDER BY `plan_rules`.`id` ASC LIMIT 1[0m
+  [1m[36mPlanRule Load (0.3ms)[0m  [1m[34mSELECT  `plan_rules`.* FROM `plan_rules` WHERE `plan_rules`.`plan_id` = 59 AND `plan_rules`.`position` = 4 ORDER BY `plan_rules`.`id` ASC LIMIT 1[0m
+  [1m[36mPlanRule Load (0.5ms)[0m  [1m[34mSELECT  `plan_rules`.* FROM `plan_rules` WHERE `plan_rules`.`plan_id` = 60 AND `plan_rules`.`position` = 1 ORDER BY `plan_rules`.`id` ASC LIMIT 1[0m
+  [1m[36mPlanRule Load (0.7ms)[0m  [1m[34mSELECT  `plan_rules`.* FROM `plan_rules` WHERE `plan_rules`.`plan_id` = 60 AND `plan_rules`.`position` = 2 ORDER BY `plan_rules`.`id` ASC LIMIT 1[0m
+  [1m[36mPlanRule Load (0.8ms)[0m  [1m[34mSELECT  `plan_rules`.* FROM `plan_rules` WHERE `plan_rules`.`plan_id` = 60 AND `plan_rules`.`position` = 3 ORDER BY `plan_rules`.`id` ASC LIMIT 1[0m
+  [1m[36mPlanRule Load (0.8ms)[0m  [1m[34mSELECT  `plan_rules`.* FROM `plan_rules` WHERE `plan_rules`.`plan_id` = 60 AND `plan_rules`.`position` = 4 ORDER BY `plan_rules`.`id` ASC LIMIT 1[0m
+  Rendered currency/show.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 68ms (Views: 59.5ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/currency/ltc" for 127.0.0.1 at 2018-03-28 22:31:24 +0200
+Processing by CurrencyController#show as HTML
+  Parameters: {"id"=>"ltc"}
+  [1m[36mCurrency Load (0.4ms)[0m  [1m[34mSELECT  `currencies`.* FROM `currencies` WHERE `currencies`.`short_name` = 'ltc' ORDER BY `currencies`.`id` ASC LIMIT 1[0m
+  Rendering currency/show.html.erb within layouts/application
+  [1m[36mPlan Load (0.6ms)[0m  [1m[34mSELECT `plans`.* FROM `plans` WHERE `plans`.`currency_id` = 23[0m
+  [1m[36mPlanRule Load (0.8ms)[0m  [1m[34mSELECT  `plan_rules`.* FROM `plan_rules` WHERE `plan_rules`.`plan_id` = 58 AND `plan_rules`.`position` = 1 ORDER BY `plan_rules`.`id` ASC LIMIT 1[0m
+  [1m[36mPlanRule Load (0.7ms)[0m  [1m[34mSELECT  `plan_rules`.* FROM `plan_rules` WHERE `plan_rules`.`plan_id` = 58 AND `plan_rules`.`position` = 2 ORDER BY `plan_rules`.`id` ASC LIMIT 1[0m
+  [1m[36mPlanRule Load (0.7ms)[0m  [1m[34mSELECT  `plan_rules`.* FROM `plan_rules` WHERE `plan_rules`.`plan_id` = 58 AND `plan_rules`.`position` = 3 ORDER BY `plan_rules`.`id` ASC LIMIT 1[0m
+  [1m[36mPlanRule Load (0.6ms)[0m  [1m[34mSELECT  `plan_rules`.* FROM `plan_rules` WHERE `plan_rules`.`plan_id` = 58 AND `plan_rules`.`position` = 4 ORDER BY `plan_rules`.`id` ASC LIMIT 1[0m
+  [1m[36mPlanRule Load (0.6ms)[0m  [1m[34mSELECT  `plan_rules`.* FROM `plan_rules` WHERE `plan_rules`.`plan_id` = 59 AND `plan_rules`.`position` = 1 ORDER BY `plan_rules`.`id` ASC LIMIT 1[0m
+  [1m[36mPlanRule Load (0.7ms)[0m  [1m[34mSELECT  `plan_rules`.* FROM `plan_rules` WHERE `plan_rules`.`plan_id` = 59 AND `plan_rules`.`position` = 2 ORDER BY `plan_rules`.`id` ASC LIMIT 1[0m
+  [1m[36mPlanRule Load (0.7ms)[0m  [1m[34mSELECT  `plan_rules`.* FROM `plan_rules` WHERE `plan_rules`.`plan_id` = 59 AND `plan_rules`.`position` = 3 ORDER BY `plan_rules`.`id` ASC LIMIT 1[0m
+  [1m[36mPlanRule Load (0.6ms)[0m  [1m[34mSELECT  `plan_rules`.* FROM `plan_rules` WHERE `plan_rules`.`plan_id` = 59 AND `plan_rules`.`position` = 4 ORDER BY `plan_rules`.`id` ASC LIMIT 1[0m
+  [1m[36mPlanRule Load (0.4ms)[0m  [1m[34mSELECT  `plan_rules`.* FROM `plan_rules` WHERE `plan_rules`.`plan_id` = 60 AND `plan_rules`.`position` = 1 ORDER BY `plan_rules`.`id` ASC LIMIT 1[0m
+  [1m[36mPlanRule Load (0.3ms)[0m  [1m[34mSELECT  `plan_rules`.* FROM `plan_rules` WHERE `plan_rules`.`plan_id` = 60 AND `plan_rules`.`position` = 2 ORDER BY `plan_rules`.`id` ASC LIMIT 1[0m
+  [1m[36mPlanRule Load (0.3ms)[0m  [1m[34mSELECT  `plan_rules`.* FROM `plan_rules` WHERE `plan_rules`.`plan_id` = 60 AND `plan_rules`.`position` = 3 ORDER BY `plan_rules`.`id` ASC LIMIT 1[0m
+  [1m[36mPlanRule Load (0.4ms)[0m  [1m[34mSELECT  `plan_rules`.* FROM `plan_rules` WHERE `plan_rules`.`plan_id` = 60 AND `plan_rules`.`position` = 4 ORDER BY `plan_rules`.`id` ASC LIMIT 1[0m
+  Rendered currency/show.html.erb within layouts/application (30.5ms)
+Completed 200 OK in 105ms (Views: 94.1ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/currency/ltc" for 127.0.0.1 at 2018-03-28 22:32:16 +0200
+Processing by CurrencyController#show as HTML
+  Parameters: {"id"=>"ltc"}
+  [1m[36mCurrency Load (0.4ms)[0m  [1m[34mSELECT  `currencies`.* FROM `currencies` WHERE `currencies`.`short_name` = 'ltc' ORDER BY `currencies`.`id` ASC LIMIT 1[0m
+  Rendering currency/show.html.erb within layouts/application
+  [1m[36mPlan Load (0.3ms)[0m  [1m[34mSELECT `plans`.* FROM `plans` WHERE `plans`.`currency_id` = 23[0m
+  [1m[36mPlanRule Load (0.8ms)[0m  [1m[34mSELECT  `plan_rules`.* FROM `plan_rules` WHERE `plan_rules`.`plan_id` = 58 AND `plan_rules`.`position` = 1 ORDER BY `plan_rules`.`id` ASC LIMIT 1[0m
+  [1m[36mPlanRule Load (0.3ms)[0m  [1m[34mSELECT  `plan_rules`.* FROM `plan_rules` WHERE `plan_rules`.`plan_id` = 58 AND `plan_rules`.`position` = 2 ORDER BY `plan_rules`.`id` ASC LIMIT 1[0m
+  [1m[36mPlanRule Load (0.3ms)[0m  [1m[34mSELECT  `plan_rules`.* FROM `plan_rules` WHERE `plan_rules`.`plan_id` = 58 AND `plan_rules`.`position` = 3 ORDER BY `plan_rules`.`id` ASC LIMIT 1[0m
+  [1m[36mPlanRule Load (0.9ms)[0m  [1m[34mSELECT  `plan_rules`.* FROM `plan_rules` WHERE `plan_rules`.`plan_id` = 58 AND `plan_rules`.`position` = 4 ORDER BY `plan_rules`.`id` ASC LIMIT 1[0m
+  [1m[36mPlanRule Load (0.8ms)[0m  [1m[34mSELECT  `plan_rules`.* FROM `plan_rules` WHERE `plan_rules`.`plan_id` = 59 AND `plan_rules`.`position` = 1 ORDER BY `plan_rules`.`id` ASC LIMIT 1[0m
+  [1m[36mPlanRule Load (0.6ms)[0m  [1m[34mSELECT  `plan_rules`.* FROM `plan_rules` WHERE `plan_rules`.`plan_id` = 59 AND `plan_rules`.`position` = 2 ORDER BY `plan_rules`.`id` ASC LIMIT 1[0m
+  [1m[36mPlanRule Load (0.6ms)[0m  [1m[34mSELECT  `plan_rules`.* FROM `plan_rules` WHERE `plan_rules`.`plan_id` = 59 AND `plan_rules`.`position` = 3 ORDER BY `plan_rules`.`id` ASC LIMIT 1[0m
+  [1m[36mPlanRule Load (0.6ms)[0m  [1m[34mSELECT  `plan_rules`.* FROM `plan_rules` WHERE `plan_rules`.`plan_id` = 59 AND `plan_rules`.`position` = 4 ORDER BY `plan_rules`.`id` ASC LIMIT 1[0m
+  [1m[36mPlanRule Load (0.4ms)[0m  [1m[34mSELECT  `plan_rules`.* FROM `plan_rules` WHERE `plan_rules`.`plan_id` = 60 AND `plan_rules`.`position` = 1 ORDER BY `plan_rules`.`id` ASC LIMIT 1[0m
+  [1m[36mPlanRule Load (0.3ms)[0m  [1m[34mSELECT  `plan_rules`.* FROM `plan_rules` WHERE `plan_rules`.`plan_id` = 60 AND `plan_rules`.`position` = 2 ORDER BY `plan_rules`.`id` ASC LIMIT 1[0m
+  [1m[36mPlanRule Load (0.4ms)[0m  [1m[34mSELECT  `plan_rules`.* FROM `plan_rules` WHERE `plan_rules`.`plan_id` = 60 AND `plan_rules`.`position` = 3 ORDER BY `plan_rules`.`id` ASC LIMIT 1[0m
+  [1m[36mPlanRule Load (0.3ms)[0m  [1m[34mSELECT  `plan_rules`.* FROM `plan_rules` WHERE `plan_rules`.`plan_id` = 60 AND `plan_rules`.`position` = 4 ORDER BY `plan_rules`.`id` ASC LIMIT 1[0m
+  Rendered currency/show.html.erb within layouts/application (28.7ms)
+Completed 200 OK in 60ms (Views: 50.3ms | ActiveRecord: 7.0ms)
+
+
