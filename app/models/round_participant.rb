@@ -1,0 +1,2 @@
+class RoundParticipant < ApplicationRecord
+end
