@@ -5,4 +5,5 @@ Rails.application.routes.draw do
     post :authenticate
   end
 
+  resources :home, only: [:index]
 end
