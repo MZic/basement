@@ -1,0 +1,24 @@
+.highlights > a {
+  text-decoration: none;
+}
+
+header > .BTC-alt, header > .LTC-alt, header > .ETH {
+  font-size: 100px;
+  color: rgb(17,17,17);
+}
+
+footer.highlights{
+  margin: 0;
+}
+
+#footer{
+  padding: 1rem;
+}
+
+.coinmarketcap-currency-widget > div > div:last-child{
+  display: none;
+}
+
+.coinmarketcap-currency-widget > div{
+  border:  none !important;
+}
