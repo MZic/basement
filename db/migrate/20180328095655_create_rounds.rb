@@ -6,6 +6,6 @@ class CreateRounds < ActiveRecord::Migration[5.0]
       t.timestamps
     end
 
-    add_index :round_participants, :plan_id
+    add_index :rounds, :plan_id
   end
 end

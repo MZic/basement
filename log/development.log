@@ -36,3 +36,78 @@ WHERE fk.referenced_column_name is not null
   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
   [1m[35mSQL (9.3ms)[0m  [1m[31mDELETE FROM `users` WHERE `users`.`id` = 1[0m
   [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (31.4ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) PRIMARY KEY) ENGINE=InnoDB[0m
+  [1m[35m (19.4ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT GET_LOCK('6411717411323471415', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (9.5ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateTickets (20180328095424)
+  [1m[35m (9.5ms)[0m  [1m[35mCREATE TABLE `tickets` (`id` int AUTO_INCREMENT PRIMARY KEY, `number` varchar(255), `amount` decimal, `plan_id` int, `transaction_id` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (31.5ms)[0m  [1m[35mCREATE  INDEX `index_tickets_on_number`  ON `tickets` (`number`) [0m
+  [1m[35m (51.2ms)[0m  [1m[35mCREATE  INDEX `index_tickets_on_plan_id`  ON `tickets` (`plan_id`) [0m
+  [1m[35m (23.6ms)[0m  [1m[35mCREATE  INDEX `index_tickets_on_transaction_id`  ON `tickets` (`transaction_id`) [0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180328095424')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreatePlans (20180328095439)
+  [1m[35m (17.7ms)[0m  [1m[35mCREATE TABLE `plans` (`id` int AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `currency_id` int, `ticket_price` int, `participant_threshold` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (21.8ms)[0m  [1m[35mCREATE  INDEX `index_plans_on_currency_id`  ON `plans` (`currency_id`) [0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180328095439')[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreatePlanRules (20180328095517)
+  [1m[35m (23.1ms)[0m  [1m[35mCREATE TABLE `plan_rules` (`id` int AUTO_INCREMENT PRIMARY KEY, `plan_id` int, `position` int, `prize` decimal, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (18.0ms)[0m  [1m[35mCREATE  INDEX `index_plan_rules_on_plan_id`  ON `plan_rules` (`plan_id`) [0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180328095517')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateRoundParticipants (20180328095651)
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT RELEASE_LOCK('6411717411323471415')[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT GET_LOCK('6411717411323471415', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateRoundParticipants (20180328095651)
+  [1m[35m (80.2ms)[0m  [1m[35mCREATE TABLE `round_participants` (`id` int AUTO_INCREMENT PRIMARY KEY, `ticket_id` int, `position` int, `prize` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (8.6ms)[0m  [1m[35mCREATE  INDEX `index_round_participants_on_ticket_id`  ON `round_participants` (`ticket_id`) [0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180328095651')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateRounds (20180328095655)
+  [1m[35m (7.1ms)[0m  [1m[35mCREATE TABLE `rounds` (`id` int AUTO_INCREMENT PRIMARY KEY, `plan_id` int, `name` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE  INDEX `index_round_participants_on_plan_id`  ON `round_participants` (`plan_id`) [0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('6411717411323471415')[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('6411717411323471415', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateRounds (20180328095655)
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE `rounds` (`id` int AUTO_INCREMENT PRIMARY KEY, `plan_id` int, `name` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('6411717411323471415')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('6411717411323471415', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateRounds (20180328095655)
+  [1m[35m (61.2ms)[0m  [1m[35mCREATE  INDEX `index_rounds_on_plan_id`  ON `rounds` (`plan_id`) [0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180328095655')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCurrencies (20180328101321)
+  [1m[35m (20.5ms)[0m  [1m[35mCREATE TABLE `currencies` (`id` int AUTO_INCREMENT PRIMARY KEY, `full_name` varchar(255), `short_name` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180328101321')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2018-03-28 11:19:16', '2018-03-28 11:19:16')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('6411717411323471415')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSHOW CREATE TABLE `currencies`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'currencies'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `plan_rules`[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSHOW CREATE TABLE `plans`[0m
+  [1m[35m (1.0ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'plans'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `round_participants`[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `rounds`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'rounds'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `tickets`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'tickets'[0m

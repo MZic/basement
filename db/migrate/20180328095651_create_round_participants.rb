@@ -3,7 +3,7 @@ class CreateRoundParticipants < ActiveRecord::Migration[5.0]
     create_table :round_participants do |t|
       t.integer :ticket_id
       t.integer :position
-      t.ineger :prize
+      t.integer :prize
       t.timestamps
     end
 

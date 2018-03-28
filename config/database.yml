@@ -11,12 +11,12 @@ default: &default
   reconnect: true
   port: 3306
   strict: false
-  username: app
-  password: EYSSSTS4
+  username: root
+  password:
 
 development:
   <<: *default
-  database: basement
+  database: lottery
 
 
 # Warning: The database defined as "test" will be erased and
@@ -24,8 +24,8 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: basement_test
+  database: lottery
 
 production:
   <<: *default
-  database: basement_prod
+  database: lottery
