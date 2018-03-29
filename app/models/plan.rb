@@ -1,5 +1,6 @@
 class Plan < ApplicationRecord
   has_many :plan_rules
+  has_many :rounds
   belongs_to :currency
 
   def first_prize
@@ -14,7 +15,7 @@ class Plan < ApplicationRecord
     plan_rules.where(position: 3).first.prize
   end
 
-  def nth_prize
-    plan_rules.where(position: 4).first.prize
+  def nth_prize(position = 4)
+    plan_rules.where(position: position).first.try(:prize)
   end
 end

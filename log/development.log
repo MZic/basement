@@ -12685,3 +12685,939 @@ Processing by CurrencyController#show as HTML
 Completed 200 OK in 60ms (Views: 50.3ms | ActiveRecord: 7.0ms)
 
 
+Started GET "/home" for 127.0.0.1 at 2018-03-29 09:23:53 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (18.1ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.0.6) lib/active_record/migration.rb:573:in `check_pending!'
+activerecord (5.0.6) lib/active_record/migration.rb:549:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.6) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.6) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.6) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.6) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/zic/.rvm/gems/ruby-2.5.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/zic/.rvm/gems/ruby-2.5.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/zic/.rvm/gems/ruby-2.5.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.4ms)
+  Rendering /Users/zic/.rvm/gems/ruby-2.5.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/zic/.rvm/gems/ruby-2.5.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /Users/zic/.rvm/gems/ruby-2.5.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/zic/.rvm/gems/ruby-2.5.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/zic/.rvm/gems/ruby-2.5.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (114.1ms)
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT GET_LOCK('6411717411323471415', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (4.9ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to FixDecimal (20180328181312)
+  [1m[35m (123.6ms)[0m  [1m[35mALTER TABLE `plans` CHANGE `ticket_price` `ticket_price` float[0m
+  [1m[35m (36.0ms)[0m  [1m[35mALTER TABLE `plan_rules` CHANGE `prize` `prize` float[0m
+  [1m[35m (30.5ms)[0m  [1m[35mALTER TABLE `tickets` CHANGE `amount` `amount` float[0m
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180328181312')[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.2ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('6411717411323471415')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (1.1ms)[0m  [1m[35mSHOW CREATE TABLE `currencies`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'currencies'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `plan_rules`[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `plans`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'plans'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `round_participants`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `rounds`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'rounds'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `tickets`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'tickets'[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mCurrency Load (0.3ms)[0m  [1m[34mSELECT `currencies`.* FROM `currencies`[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT `plans`.* FROM `plans`[0m
+  [1m[36mPlanRule Load (0.2ms)[0m  [1m[34mSELECT `plan_rules`.* FROM `plan_rules`[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `currencies` (`full_name`, `short_name`, `created_at`, `updated_at`) VALUES ('Bitcoin', 'BTC', '2018-03-29 07:24:34', '2018-03-29 07:24:34')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `currencies` (`full_name`, `short_name`, `created_at`, `updated_at`) VALUES ('Litecoin', 'LTC', '2018-03-29 07:24:34', '2018-03-29 07:24:34')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `currencies` (`full_name`, `short_name`, `created_at`, `updated_at`) VALUES ('Ethereum', 'ETH', '2018-03-29 07:24:34', '2018-03-29 07:24:34')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT  `currencies`.* FROM `currencies` WHERE `currencies`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO `plans` (`name`, `currency_id`, `ticket_price`, `participant_threshold`, `created_at`, `updated_at`) VALUES ('Snack', 1, 0.001, 1000, '2018-03-29 07:24:34', '2018-03-29 07:24:34')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (1, 1, 0.03, '2018-03-29 07:24:34', '2018-03-29 07:24:34')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (1, 2, 0.01, '2018-03-29 07:24:34', '2018-03-29 07:24:34')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (1, 3, 0.005, '2018-03-29 07:24:34', '2018-03-29 07:24:34')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (1, 3, 0.002, '2018-03-29 07:24:34', '2018-03-29 07:24:34')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (1, 4, 0.002, '2018-03-29 07:24:34', '2018-03-29 07:24:34')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (1, 5, 0.002, '2018-03-29 07:24:34', '2018-03-29 07:24:34')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (1, 6, 0.002, '2018-03-29 07:24:34', '2018-03-29 07:24:34')[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (1, 7, 0.002, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (1, 8, 0.002, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (1, 9, 0.002, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (1, 10, 0.002, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (1, 11, 0.002, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (1, 12, 0.002, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (1, 13, 0.002, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (1, 14, 0.002, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (1, 15, 0.002, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (1, 16, 0.002, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (1, 17, 0.002, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (1, 18, 0.002, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (1, 19, 0.002, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT  `currencies`.* FROM `currencies` WHERE `currencies`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plans` (`name`, `currency_id`, `ticket_price`, `participant_threshold`, `created_at`, `updated_at`) VALUES ('Lunch', 1, 0.003, 500, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (2, 1, 0.2, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (2, 2, 0.1, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (2, 3, 0.05, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (2, 3, 0.006, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (2, 4, 0.006, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (2, 5, 0.006, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.9ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (2, 6, 0.006, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (2, 7, 0.006, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (2, 8, 0.006, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (2, 9, 0.006, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (2, 10, 0.006, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (2, 11, 0.006, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (2, 12, 0.006, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (2, 13, 0.006, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (2, 14, 0.006, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (2, 15, 0.006, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (2, 16, 0.006, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (2, 17, 0.006, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (2, 18, 0.006, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (2, 19, 0.006, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT  `currencies`.* FROM `currencies` WHERE `currencies`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `plans` (`name`, `currency_id`, `ticket_price`, `participant_threshold`, `created_at`, `updated_at`) VALUES ('Dinner', 1, 0.01, 300, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (3, 1, 0.5, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (3, 2, 0.2, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (3, 3, 0.1, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (3, 3, 0.05, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (3, 4, 0.05, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (3, 5, 0.05, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (3, 6, 0.05, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (3, 7, 0.05, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (3, 8, 0.05, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (3, 9, 0.05, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (3, 10, 0.05, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (3, 11, 0.05, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (3, 12, 0.05, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (3, 13, 0.05, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (3, 14, 0.05, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (3, 15, 0.05, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (3, 16, 0.05, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (3, 17, 0.05, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (3, 18, 0.05, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (3, 19, 0.05, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCurrency Load (0.3ms)[0m  [1m[34mSELECT  `currencies`.* FROM `currencies` WHERE `currencies`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plans` (`name`, `currency_id`, `ticket_price`, `participant_threshold`, `created_at`, `updated_at`) VALUES ('Snack', 2, 0.03, 1000, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 4 LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (4, 1, 1.0, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 4 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (4, 2, 0.5, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 4 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (4, 3, 0.2, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 4 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (4, 3, 0.01, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 4 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (4, 4, 0.01, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 4 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (4, 5, 0.01, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 4 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (4, 6, 0.01, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.3ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 4 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (4, 7, 0.01, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 4 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (4, 8, 0.01, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.3ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 4 LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (4, 9, 0.01, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 4 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (4, 10, 0.01, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 4 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (4, 11, 0.01, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 4 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (4, 12, 0.01, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 4 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (4, 13, 0.01, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 4 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (4, 14, 0.01, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 4 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (4, 15, 0.01, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 4 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (4, 16, 0.01, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 4 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (4, 17, 0.01, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 4 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (4, 18, 0.01, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 4 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (4, 19, 0.01, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT  `currencies`.* FROM `currencies` WHERE `currencies`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plans` (`name`, `currency_id`, `ticket_price`, `participant_threshold`, `created_at`, `updated_at`) VALUES ('Lunch', 2, 0.1, 500, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.3ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 5 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (5, 1, 2.5, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 5 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (5, 2, 1.0, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 5 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (5, 3, 0.5, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 5 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (5, 3, 0.01, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 5 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (5, 4, 0.01, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 5 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (5, 5, 0.01, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 5 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (5, 6, 0.01, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 5 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (5, 7, 0.01, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 5 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (5, 8, 0.01, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 5 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (5, 9, 0.01, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 5 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (5, 10, 0.01, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 5 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (5, 11, 0.01, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 5 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (5, 12, 0.01, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 5 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (5, 13, 0.01, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 5 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (5, 14, 0.01, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 5 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (5, 15, 0.01, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 5 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (5, 16, 0.01, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 5 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (5, 17, 0.01, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 5 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (5, 18, 0.01, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 5 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (5, 19, 0.01, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT  `currencies`.* FROM `currencies` WHERE `currencies`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plans` (`name`, `currency_id`, `ticket_price`, `participant_threshold`, `created_at`, `updated_at`) VALUES ('Dinner', 2, 0.5, 300, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 6 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (6, 1, 10.0, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 6 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (6, 2, 5.0, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 6 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (6, 3, 3.0, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 6 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (6, 3, 1.5, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 6 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (6, 4, 1.5, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 6 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (6, 5, 1.5, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 6 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (6, 6, 1.5, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.3ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 6 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (6, 7, 1.5, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.3ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 6 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (6, 8, 1.5, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 6 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (6, 9, 1.5, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.3ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 6 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (6, 10, 1.5, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 6 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (6, 11, 1.5, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.3ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 6 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (6, 12, 1.5, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 6 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (6, 13, 1.5, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 6 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (6, 14, 1.5, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 6 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (6, 15, 1.5, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 6 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (6, 16, 1.5, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 6 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (6, 17, 1.5, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 6 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (6, 18, 1.5, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 6 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (6, 19, 1.5, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT  `currencies`.* FROM `currencies` WHERE `currencies`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plans` (`name`, `currency_id`, `ticket_price`, `participant_threshold`, `created_at`, `updated_at`) VALUES ('Snack', 3, 0.015, 1000, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 7 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (7, 1, 0.5, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 7 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (7, 2, 0.2, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 7 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (7, 3, 0.1, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 7 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (7, 3, 0.05, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 7 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (7, 4, 0.05, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 7 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (7, 5, 0.05, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 7 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (7, 6, 0.05, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 7 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (7, 7, 0.05, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 7 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (7, 8, 0.05, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 7 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (7, 9, 0.05, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 7 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (7, 10, 0.05, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 7 LIMIT 1[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (7, 11, 0.05, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 7 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (7, 12, 0.05, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 7 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (7, 13, 0.05, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 7 LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (7, 14, 0.05, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 7 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (7, 15, 0.05, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 7 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (7, 16, 0.05, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 7 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (7, 17, 0.05, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 7 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (7, 18, 0.05, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 7 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (7, 19, 0.05, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT  `currencies`.* FROM `currencies` WHERE `currencies`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plans` (`name`, `currency_id`, `ticket_price`, `participant_threshold`, `created_at`, `updated_at`) VALUES ('Lunch', 3, 0.05, 500, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 8 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (8, 1, 1.5, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 8 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (8, 2, 0.5, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 8 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (8, 3, 0.1, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 8 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (8, 3, 0.02, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 8 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (8, 4, 0.02, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 8 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (8, 5, 0.02, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 8 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (8, 6, 0.02, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 8 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (8, 7, 0.02, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 8 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (8, 8, 0.02, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 8 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (8, 9, 0.02, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.3ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 8 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (8, 10, 0.02, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 8 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (8, 11, 0.02, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 8 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (8, 12, 0.02, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 8 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (8, 13, 0.02, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 8 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (8, 14, 0.02, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 8 LIMIT 1[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (8, 15, 0.02, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 8 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (8, 16, 0.02, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 8 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (8, 17, 0.02, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 8 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (8, 18, 0.02, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 8 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (8, 19, 0.02, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCurrency Load (0.2ms)[0m  [1m[34mSELECT  `currencies`.* FROM `currencies` WHERE `currencies`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `plans` (`name`, `currency_id`, `ticket_price`, `participant_threshold`, `created_at`, `updated_at`) VALUES ('Dinner', 3, 0.15, 500, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.3ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 9 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (9, 1, 4.0, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 9 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (9, 2, 2.0, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 9 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (9, 3, 1.0, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 9 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (9, 3, 0.5, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 9 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (9, 4, 0.5, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 9 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (9, 5, 0.5, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 9 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (9, 6, 0.5, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 9 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (9, 7, 0.5, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 9 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (9, 8, 0.5, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 9 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (9, 9, 0.5, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 9 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (9, 10, 0.5, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 9 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (9, 11, 0.5, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 9 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (9, 12, 0.5, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 9 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (9, 13, 0.5, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 9 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (9, 14, 0.5, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 9 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (9, 15, 0.5, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 9 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (9, 16, 0.5, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 9 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (9, 17, 0.5, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 9 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (9, 18, 0.5, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlan Load (0.2ms)[0m  [1m[34mSELECT  `plans`.* FROM `plans` WHERE `plans`.`id` = 9 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `plan_rules` (`plan_id`, `position`, `prize`, `created_at`, `updated_at`) VALUES (9, 19, 0.5, '2018-03-29 07:24:35', '2018-03-29 07:24:35')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/home" for 127.0.0.1 at 2018-03-29 09:24:38 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 724ms (Views: 709.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2018-03-29 09:24:55 +0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 22ms (Views: 18.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/currency/btc" for 127.0.0.1 at 2018-03-29 09:25:04 +0200
+Processing by CurrencyController#show as HTML
+  Parameters: {"id"=>"btc"}
+  [1m[36mCurrency Load (0.3ms)[0m  [1m[34mSELECT  `currencies`.* FROM `currencies` WHERE `currencies`.`short_name` = 'btc' ORDER BY `currencies`.`id` ASC LIMIT 1[0m
+  Rendering currency/show.html.erb within layouts/application
+  [1m[36mPlan Load (6.8ms)[0m  [1m[34mSELECT `plans`.* FROM `plans` WHERE `plans`.`currency_id` = 1[0m
+  [1m[36mPlanRule Load (0.3ms)[0m  [1m[34mSELECT  `plan_rules`.* FROM `plan_rules` WHERE `plan_rules`.`plan_id` = 1 AND `plan_rules`.`position` = 1 ORDER BY `plan_rules`.`id` ASC LIMIT 1[0m
+  [1m[36mPlanRule Load (0.3ms)[0m  [1m[34mSELECT  `plan_rules`.* FROM `plan_rules` WHERE `plan_rules`.`plan_id` = 1 AND `plan_rules`.`position` = 2 ORDER BY `plan_rules`.`id` ASC LIMIT 1[0m
+  [1m[36mPlanRule Load (0.2ms)[0m  [1m[34mSELECT  `plan_rules`.* FROM `plan_rules` WHERE `plan_rules`.`plan_id` = 1 AND `plan_rules`.`position` = 3 ORDER BY `plan_rules`.`id` ASC LIMIT 1[0m
+  [1m[36mPlanRule Load (0.3ms)[0m  [1m[34mSELECT  `plan_rules`.* FROM `plan_rules` WHERE `plan_rules`.`plan_id` = 1 AND `plan_rules`.`position` = 4 ORDER BY `plan_rules`.`id` ASC LIMIT 1[0m
+  [1m[36mPlanRule Load (0.3ms)[0m  [1m[34mSELECT  `plan_rules`.* FROM `plan_rules` WHERE `plan_rules`.`plan_id` = 2 AND `plan_rules`.`position` = 1 ORDER BY `plan_rules`.`id` ASC LIMIT 1[0m
+  [1m[36mPlanRule Load (0.3ms)[0m  [1m[34mSELECT  `plan_rules`.* FROM `plan_rules` WHERE `plan_rules`.`plan_id` = 2 AND `plan_rules`.`position` = 2 ORDER BY `plan_rules`.`id` ASC LIMIT 1[0m
+  [1m[36mPlanRule Load (0.3ms)[0m  [1m[34mSELECT  `plan_rules`.* FROM `plan_rules` WHERE `plan_rules`.`plan_id` = 2 AND `plan_rules`.`position` = 3 ORDER BY `plan_rules`.`id` ASC LIMIT 1[0m
+  [1m[36mPlanRule Load (0.3ms)[0m  [1m[34mSELECT  `plan_rules`.* FROM `plan_rules` WHERE `plan_rules`.`plan_id` = 2 AND `plan_rules`.`position` = 4 ORDER BY `plan_rules`.`id` ASC LIMIT 1[0m
+  [1m[36mPlanRule Load (0.2ms)[0m  [1m[34mSELECT  `plan_rules`.* FROM `plan_rules` WHERE `plan_rules`.`plan_id` = 3 AND `plan_rules`.`position` = 1 ORDER BY `plan_rules`.`id` ASC LIMIT 1[0m
+  [1m[36mPlanRule Load (0.3ms)[0m  [1m[34mSELECT  `plan_rules`.* FROM `plan_rules` WHERE `plan_rules`.`plan_id` = 3 AND `plan_rules`.`position` = 2 ORDER BY `plan_rules`.`id` ASC LIMIT 1[0m
+  [1m[36mPlanRule Load (0.4ms)[0m  [1m[34mSELECT  `plan_rules`.* FROM `plan_rules` WHERE `plan_rules`.`plan_id` = 3 AND `plan_rules`.`position` = 3 ORDER BY `plan_rules`.`id` ASC LIMIT 1[0m
+  [1m[36mPlanRule Load (0.3ms)[0m  [1m[34mSELECT  `plan_rules`.* FROM `plan_rules` WHERE `plan_rules`.`plan_id` = 3 AND `plan_rules`.`position` = 4 ORDER BY `plan_rules`.`id` ASC LIMIT 1[0m
+  Rendered currency/show.html.erb within layouts/application (60.8ms)
+Completed 200 OK in 106ms (Views: 71.2ms | ActiveRecord: 16.5ms)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('6411717411323471415', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (12.6ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to AddForeignConstraints (20180329093541)
+  [1m[35m (4.5ms)[0m  [1m[35mALTER TABLE `tickets` ADD CONSTRAINT `fk_rails_f97a57b3e0`
+FOREIGN KEY (`round_id`)
+  REFERENCES `rounds` (`id`)
+[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT RELEASE_LOCK('6411717411323471415')[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('6411717411323471415', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (4.5ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to AddForeignConstraints (20180329093541)
+  [1m[35m (88.9ms)[0m  [1m[35mALTER TABLE `tickets` DROP `plan_id`[0m
+  [1m[35m (27.0ms)[0m  [1m[35mALTER TABLE `tickets` ADD `position` int[0m
+  [1m[35m (13.0ms)[0m  [1m[35mALTER TABLE `tickets` ADD `round_id` int[0m
+  [1m[35m (6.8ms)[0m  [1m[35mALTER TABLE `tickets` CHANGE `amount` `prize` float[0m
+  [1m[35m (20.1ms)[0m  [1m[35mALTER TABLE `tickets` ADD CONSTRAINT `fk_rails_f97a57b3e0`
+FOREIGN KEY (`round_id`)
+  REFERENCES `rounds` (`id`)
+[0m
+  [1m[35m (32.6ms)[0m  [1m[35mALTER TABLE `plan_rules` ADD CONSTRAINT `fk_rails_dd498a5347`
+FOREIGN KEY (`plan_id`)
+  REFERENCES `plans` (`id`)
+[0m
+  [1m[35m (62.8ms)[0m  [1m[35mALTER TABLE `plans` ADD CONSTRAINT `fk_rails_ce17ab4494`
+FOREIGN KEY (`currency_id`)
+  REFERENCES `currencies` (`id`)
+[0m
+  [1m[35m (89.7ms)[0m  [1m[35mALTER TABLE `rounds` ADD CONSTRAINT `fk_rails_3044faf242`
+FOREIGN KEY (`plan_id`)
+  REFERENCES `plans` (`id`)
+[0m
+  [1m[35m (6.7ms)[0m  [1m[35mDROP TABLE `round_participants`[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180329093541')[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('6411717411323471415')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `currencies`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'currencies'[0m
+  [1m[35m (3.6ms)[0m  [1m[35mSHOW CREATE TABLE `plan_rules`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `plans`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'plans'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `rounds`[0m
+  [1m[35m (0.6ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'rounds'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `tickets`[0m
+  [1m[35m (1.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'tickets'[0m
