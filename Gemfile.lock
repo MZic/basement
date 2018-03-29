@@ -121,10 +121,6 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
-    rspec (3.7.0)
-      rspec-core (~> 3.7.0)
-      rspec-expectations (~> 3.7.0)
-      rspec-mocks (~> 3.7.0)
     rspec-core (3.7.1)
       rspec-support (~> 3.7.0)
     rspec-expectations (3.7.0)
@@ -132,6 +128,14 @@ GEM
       rspec-support (~> 3.7.0)
     rspec-mocks (3.7.0)
       diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.7.0)
+    rspec-rails (3.7.2)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      railties (>= 3.0)
+      rspec-core (~> 3.7.0)
+      rspec-expectations (~> 3.7.0)
+      rspec-mocks (~> 3.7.0)
       rspec-support (~> 3.7.0)
     rspec-support (3.7.1)
     sass (3.5.6)
@@ -192,8 +196,7 @@ DEPENDENCIES
   mysql2 (~> 0.4.4)
   puma (~> 3.0)
   rails (~> 5.0.0)
-  rspec
-  rspec-mocks
+  rspec-rails
   sass-rails (~> 5.0)
   simple_command
   spring

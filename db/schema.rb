@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180329093541) do
+ActiveRecord::Schema.define(version: 20180329120105) do
 
   create_table "currencies", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "full_name"
@@ -48,10 +48,10 @@ ActiveRecord::Schema.define(version: 20180329093541) do
 
   create_table "tickets", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "number"
-    t.float    "prize",          limit: 24
+    t.float    "prize",          limit: 24, default: 0.0
     t.string   "transaction_id"
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.datetime "created_at",                              null: false
+    t.datetime "updated_at",                              null: false
     t.integer  "position"
     t.integer  "round_id"
     t.index ["number"], name: "index_tickets_on_number", using: :btree

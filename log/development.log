@@ -13621,3 +13621,49 @@ FOREIGN KEY (`plan_id`)
   [1m[35m (0.6ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'rounds'[0m
   [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `tickets`[0m
   [1m[35m (1.4ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'tickets'[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('6411717411323471415', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to AddDefault (20180329115846)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('6411717411323471415')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('6411717411323471415', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (2.6ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to AddDefault (20180329115846)
+  [1m[35m (140.5ms)[0m  [1m[35mALTER TABLE `tickets` CHANGE `prize` `prize` int DEFAULT 0[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180329115846')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE `ar_internal_metadata` SET `value` = 'development', `updated_at` = '2018-03-29 12:00:13' WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('6411717411323471415')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `currencies`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'currencies'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `plan_rules`[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSHOW CREATE TABLE `plans`[0m
+  [1m[35m (1.6ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'plans'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `rounds`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'rounds'[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW CREATE TABLE `tickets`[0m
+  [1m[35m (1.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'tickets'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('6411717411323471415', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE `ar_internal_metadata` SET `value` = 'development', `updated_at` = '2018-03-29 12:01:23' WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('6411717411323471415')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `currencies`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'currencies'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `plan_rules`[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `plans`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'plans'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `rounds`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'rounds'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `tickets`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'tickets'[0m

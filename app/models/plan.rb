@@ -16,6 +16,6 @@ class Plan < ApplicationRecord
   end
 
   def nth_prize(position = 4)
-    plan_rules.where(position: position).first.try(:prize)
+    plan_rules.where(position: position).first.try(:prize) || 0.0
   end
 end

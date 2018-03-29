@@ -1,10 +1,9 @@
-require "spec_helper"
+require "rails_helper"
 
-describe 'RoundServiceSpec', type: :service do
-  let(:plan) { FactoryBot.create(:plan) }
-  let(:round) { FactoryBot.create(:round, plan: plan, name: 'Round 1') }
-  let(:tickets) { FactoryBot.create(:ticket, rond: round) }
-
+describe RoundService, type: :service do
+  let(:plan) { create(:plan) }
+  let(:round) { create(:round, plan: plan, name: 'Round 1') }
+  subject{ RoundService.new(round) }
   # def run_round
   #   round.tickets.shuffle.each_with_index do |participant, index|
   #     position = index + 1
@@ -14,9 +13,13 @@ describe 'RoundServiceSpec', type: :service do
   #   end
   # end
   describe "#run_round" do
-    # before do
-    #   allow(round).to receive(:tickets).and_return(tickets)
-    # end
-    it { puts tickets.id }
+    let!(:tickets) { create_list(:ticket, 25, round: round) }
+    before { subject.run_round }
+
+    it 'shold assing the right prices' do
+      round.tickets.each do |ticket|
+        expect(ticket.prize).to be(plan.nth_prize(ticket.position))
+      end
+    end
   end
 end
